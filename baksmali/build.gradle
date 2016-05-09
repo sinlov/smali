@@ -75,7 +75,7 @@ uploadArchives {
         pom.project {
             description 'baksmali is a disassembler for dalvik bytecode'
             scm {
-                url 'https://github.com/JesusFreke/smali/tree/master/baksmali'
+                url 'http://221.236.16.7:9009/nexus/content/repositories/android-releases/'
             }
         }
     }

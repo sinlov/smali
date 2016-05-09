@@ -41,7 +41,7 @@ uploadArchives {
         pom.project {
             description 'This library contains random utilities used by smali/baksmali/dexlib2'
             scm {
-                url 'https://github.com/JesusFreke/smali/tree/master/util'
+                url 'http://221.236.16.7:9009/nexus/content/repositories/android-releases/'
             }
         }
     }

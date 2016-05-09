@@ -128,7 +128,7 @@ uploadArchives {
         pom.project {
             description 'smali is an assembler for dalvik bytecode'
             scm {
-                url 'https://github.com/JesusFreke/smali/tree/master/smali'
+                url 'http://221.236.16.7:9009/nexus/content/repositories/android-releases/'
             }
         }
     }

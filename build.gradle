@@ -31,7 +31,7 @@
 
 apply plugin: 'idea'
 
-version = '2.1.2'
+version = '2.1.5'
 
 if (!('release' in gradle.startParameter.taskNames)) {
     def versionSuffix
@@ -150,36 +150,36 @@ subprojects {
                 beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
                 if (rootProject.hasProperty('sonatypeUsername') && rootProject.hasProperty('sonatypePassword')) {
-                    repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
+                    repository(url: 'http://221.236.16.7:9009/nexus/content/repositories/android-releases/') {
                         authentication(userName: sonatypeUsername, password: sonatypePassword)
                     }
                 }
 
                 pom.artifactId = project.name
-
-                pom.project {
-                    name project.name
-                    url 'http://smali.org'
-                    packaging 'jar'
-                    licenses {
-                        license {
-                            name 'The BSD 3-Clause License'
-                            url 'http://opensource.org/licenses/BSD-3-Clause'
-                            distribution 'repo'
-                        }
-                    }
-                    scm {
-                        connection 'scm:git:git://github.com/JesusFreke/smali.git'
-                        developerConnection 'scm:git:git@github.com:JesusFreke/smali.git'
-                    }
-                    developers {
-                        developer {
-                            id 'jesusfreke'
-                            name 'Ben Gruver'
-                            email 'jesusfreke@jesusfreke.com'
-                        }
-                    }
-                }
+                pom.version = version
+//                pom.project {
+//                    name project.name
+//                    url 'http://smali.org'
+//                    packaging 'jar'
+//                    licenses {
+//                        license {
+//                            name 'The BSD 3-Clause License'
+//                            url 'http://opensource.org/licenses/BSD-3-Clause'
+//                            distribution 'repo'
+//                        }
+//                    }
+//                    scm {
+//                        connection 'scm:git:git://github.com/JesusFreke/smali.git'
+//                        developerConnection 'scm:git:git@github.com:JesusFreke/smali.git'
+//                    }
+//                    developers {
+//                        developer {
+//                            id 'jesusfreke'
+//                            name 'Ben Gruver'
+//                            email 'jesusfreke@jesusfreke.com'
+//                        }
+//                    }
+//                }
             }
         }
 
